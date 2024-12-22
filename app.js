@@ -3,12 +3,12 @@ const rules = []
 
 rules[0] = {
   a: "F",
-  b: "   FF"
+  b: "FF"
 }
 
 rules[1] = {
 a: "X",
-  b: " F-[[-X]+X]+F[+FX]+X-"
+  b: " F-[[-X]+X]+F[+FX]+X+"
 }
 
 
@@ -19,7 +19,7 @@ let len = 5
 let angle = Math.PI/2
 
 function turtle(){
-    background(51);
+    background(250,207,90);
   len *= .8
   angle *= .9
   
@@ -32,7 +32,7 @@ for(let i=0; i<sentence.length; i++){
     let curr = sentence[i]
     
     if(curr == "F"){
-      stroke(255)
+      stroke(8,95,99)
        line(0,0,0,-len)
       translate(0,-len)
     }else if(curr == "+"){
@@ -79,7 +79,6 @@ for(let i=0; i<sentence.length; i++){
 function setup() {
   createCanvas(innerWidth, innerHeight);
 turtle()
- let btn = createButton("generate")
+ let btn = createButton("Generate")
  btn.mousePressed(generate)
   }
-
